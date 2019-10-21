@@ -1,3 +1,4 @@
 language: bash
-os: linux-ppc64le
+os: linux
+arch: ppc64le
 script: uname -a
