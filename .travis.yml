@@ -1,8 +1,5 @@
 language: generic
-
 os: linux
-
 arch: ppc64le
-
 script: 
   - uname -a
