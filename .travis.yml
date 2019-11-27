@@ -1,4 +1,9 @@
-language: bash
+language: go
+
 os: linux
+
 arch: ppc64le
-script: uname -a
+
+script: 
+  - uname -a
+  - go version
