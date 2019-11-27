@@ -6,4 +6,3 @@ arch: ppc64le
 
 script: 
   - uname -a
-  - go version
