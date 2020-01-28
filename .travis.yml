@@ -1,5 +1,21 @@
-language: generic
-os: linux
-arch: ppc64le
-script: 
-  - uname -a
+arch:
+  - amd64
+  - ppc64le
+
+env:
+  - FOO=foo
+  - FOO=bar
+
+script: echo $FOO
+
+jobs:
+  include:
+    - stage: build
+      script: echo build
+      env: FOO=foo
+    - stage: deploy
+      script: echo deploy
+      env: FOO=foo
+    - stage: destroy
+      script: echo destory
+      env: FOO=foo
