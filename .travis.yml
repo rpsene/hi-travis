@@ -4,3 +4,4 @@ sudo: required
 
 script: 
   - uname -a
+  - echo "Test 2"
