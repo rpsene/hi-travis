@@ -1,26 +1,6 @@
-env:
-  - FOO=foo
-  - FOO=bar
+os: linux-ppc64le
 
-script: echo $FOO
+sudo: required
 
-jobs:
-  include:
-    - stage: build
-      script: echo build
-      env: FOO=foo
-      arch:
-        - amd64
-        - ppc64le
-    - stage: deploy
-      script: echo deploy
-      env: FOO=foo
-      arch:
-        - amd64
-        - ppc64le
-    - stage: destroy
-      arch:
-        - amd64
-        - ppc64le
-      script: echo destory
-      env: FOO=foo
+script: 
+  - uname -a
