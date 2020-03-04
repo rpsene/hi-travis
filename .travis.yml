@@ -1,4 +1,6 @@
-os: linux-ppc64le
+os: linux
+
+arch: ppc64le
 
 sudo: required
 
