@@ -2,6 +2,9 @@ os: linux-ppc64le
 
 sudo: required
 
+services:
+  - docker
+
 script: 
   - uname -a
-  - echo "Test 2"
+  - docker pull rancher/rancher
