@@ -1,6 +1,10 @@
+language: c
+
 os: linux
 
-arch: ppc64le
+arch:
+  - ppc64le
+  - amd64
 
 sudo: required
 
@@ -9,4 +13,3 @@ services:
 
 script: 
   - uname -a
-  - docker pull rancher/rancher
