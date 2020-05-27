@@ -14,4 +14,4 @@ services:
 script: 
   - uname -a
   - wget https://jcenter.bintray.com/org/ow2/asm/asm/4.1/asm-4.1.pom
-  - ping -c google.com
+  - ping -c 5 google.com
