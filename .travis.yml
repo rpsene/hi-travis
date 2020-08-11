@@ -14,5 +14,6 @@ services:
 script: 
   - uname -a
   - wget https://jcenter.bintray.com/org/ow2/asm/asm/4.1/asm-4.1.pom
+  - cat ./.docker/config.json
   - ping -c 5 google.com
   - sudo docker pull ubuntu:18.04
