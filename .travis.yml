@@ -17,3 +17,4 @@ script:
   - cat ./.docker/config.json
   - ping -c 5 google.com
   - sudo docker pull ubuntu:18.04
+  - docker run --rm -t ubuntu:18.04 bash -c 'cat /sys/module/overlay/parameters/metacopy; apt update -y; apt install -y git'
