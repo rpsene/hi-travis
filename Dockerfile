@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8:latest
+FROM registry.redhat.io/ubi8/ubi-minimal:latest
 
 RUN microdnf install -y --nodocs git python3 python3-pip gcc python3-devel gcc-c++ atlas-devel gcc-gfortran  && dnf clean all
 #COPY snafu/image_resources/centos8-appstream.repo /etc/yum.repos.d/centos8-appstream.repo
