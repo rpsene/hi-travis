@@ -1,4 +1,4 @@
-language: c
+language: bash
 
 os: linux
 
@@ -12,7 +12,4 @@ services:
 
 script: 
   - uname -a
-  - wget https://jcenter.bintray.com/org/ow2/asm/asm/4.1/asm-4.1.pom
-  - ping -c 5 google.com
-  - sudo docker pull ubuntu:18.04
-  - docker run --rm -t ubuntu:18.04 bash -c 'cat /sys/module/overlay/parameters/metacopy; apt update -y; apt install -y git'
+  - docker built -t sample .
