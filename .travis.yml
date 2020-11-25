@@ -10,6 +10,7 @@ sudo: required
 services:
   - docker
 
-script: 
+script:
+  - docker login registry.redhat.io -u $USER -p $PWD
   - uname -a
   - docker build -t sample .
