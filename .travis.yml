@@ -12,4 +12,4 @@ services:
 
 script: 
   - uname -a
-  - docker built -t sample .
+  - docker build -t sample .
