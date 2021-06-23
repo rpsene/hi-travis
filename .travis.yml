@@ -1,16 +1,28 @@
-language: bash
+language: java
 
-os: linux
+dist: bionic
 
-arch:
-  - ppc64le
+jdk:
+  - openjdk11
+env:
+  - ARCH=ppc64le OS=linux
+
+node_js:
+  - "12.13"
 
 sudo: required
 
-services:
-  - docker
+os: linux
+
+arch: ppc64le
+
+services: docker
 
 script:
-  - docker login registry.redhat.io -u $USER -p $PWD
-  - uname -a
-  - docker build -t sample .
+  - cat /etc/hostname 
+  - cat /etc/resolv.conf
+  - cat /etc/os-release
+  - sudo apt-get update -y
+  - docker pull quay.io/powercloud/powervs-container-host:ocp-latest
+  - docker run --rm quay.io/powercloud/powervs-container-host:ocp-latest
+  - sudo apt-get install build-essential
